@@ -6,6 +6,8 @@ Legacy Brew Coffee is a modern and stylish coffee shop that brings you the fines
 
 This project is a web application designed to showcase the offerings, menu, and ambiance of Legacy Brew Coffee.
 
+![heroimage](https://github.com/aldiandarwin/Legacy-Brew-Coffee/assets/70283015/b7306e67-08b3-4491-99a2-36b9fd71901c)
+
 ## Features
 
 **_Responsive Design:_** The web application is crafted to deliver a seamless experience across various devices and screen sizes.
@@ -18,11 +20,15 @@ This project is a web application designed to showcase the offerings, menu, and 
 
 **_Social Media Integration:_** Stay updated and engaged with Legacy Brew Coffee through social media links.
 
+![coffe1](https://github.com/aldiandarwin/Legacy-Brew-Coffee/assets/70283015/0daac23b-1d2c-47d4-a14f-45a6f2b75eb8)
+
 ## Technologies
 
 **_Alpine.js:_** A lightweight JavaScript framework for enhancing interactivity and behavior on the client-side.
 
 **_Midtrans Payment Gateway:_** Integrate secure and seamless online payments into the checkout process.
+
+![coffe2](https://github.com/aldiandarwin/Legacy-Brew-Coffee/assets/70283015/42e02366-00c4-4239-ab59-d82e8e5b78a1)
 
 ## Getting Started
 
@@ -33,7 +39,7 @@ To get a copy of this project up and running on your local machine, follow these
 bash
 
 ```Copy code
-git clone [repository-url]
+git clone <https://github.com/aldiandarwin/Legacy-Brew-Coffee.git>
 ```
 
 Navigate to the Project Directory:
