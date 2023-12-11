@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -22,10 +23,11 @@
     <!-- AlpineJS -->
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
 
     <!-- App -->
-    <script src="src/app.js"></script>
+    <script src="src/app.js" async></script>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -47,7 +49,8 @@
           <span
             class="quantity-badge"
             x-show="$store.cart.quantity"
-            x-text="$store.cart.quantity"></span>
+            x-text="$store.cart.quantity"
+          ></span>
         </a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
@@ -88,6 +91,12 @@
 
         <div class="form-container" x-show="$store.cart.items.length">
           <form action="" id="checkoutForm">
+            <input
+              type="hidden"
+              name="items"
+              x-model="JSON.stringify($store.cart.items)"
+            />
+            <input type="hidden" name="total" x-model="($store.cart.total)" />
             <h5>Customer Detail</h5>
 
             <label for="name">
@@ -106,10 +115,11 @@
             </label>
 
             <button
-              class="checkout-button"
+              class="checkout-button disabled"
               type="submit"
               id="checkout-button"
-              value="Checkout">
+              value="Checkout"
+            >
               Checkout
             </button>
           </form>
@@ -168,7 +178,8 @@
           <img
             class="menu-card-img"
             src="img/menu/Rectangle 7.png"
-            alt="Espresso" />
+            alt="Espresso"
+          />
           <h3 class="menu-card-title">- Espresso -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
@@ -176,7 +187,8 @@
           <img
             class="menu-card-img"
             src="img/menu/Rectangle 7.png"
-            alt="Espresso" />
+            alt="Espresso"
+          />
           <h3 class="menu-card-title">- Arabica -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
@@ -184,7 +196,8 @@
           <img
             class="menu-card-img"
             src="img/menu/Rectangle 7.png"
-            alt="Espresso" />
+            alt="Espresso"
+          />
           <h3 class="menu-card-title">- Americano -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
@@ -192,7 +205,8 @@
           <img
             class="menu-card-img"
             src="img/menu/Rectangle 7.png"
-            alt="Espresso" />
+            alt="Espresso"
+          />
           <h3 class="menu-card-title">- Latte -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
@@ -220,7 +234,8 @@
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round"
+                >
                   <use href="img/feather-sprite.svg#shopping-cart" />
                 </svg>
               </a>
@@ -232,7 +247,8 @@
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round"
+                >
                   <use href="img/feather-sprite.svg#eye" />
                 </svg>
               </a>
@@ -250,7 +266,8 @@
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round"
+                >
                   <use href="img/feather-sprite.svg#star" />
                 </svg>
                 <svg
@@ -260,7 +277,8 @@
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round"
+                >
                   <use href="img/feather-sprite.svg#star" />
                 </svg>
                 <svg
@@ -270,7 +288,8 @@
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round"
+                >
                   <use href="img/feather-sprite.svg#star" />
                 </svg>
                 <svg
@@ -280,7 +299,8 @@
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round"
+                >
                   <use href="img/feather-sprite.svg#star" />
                 </svg>
                 <svg
@@ -290,7 +310,8 @@
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round"
+                >
                   <use href="img/feather-sprite.svg#star" />
                 </svg>
               </div>
@@ -318,7 +339,8 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126829.33928684746!2d106.64423120501284!3d-6.595001228766689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c44a0cd6aab5%3A0x301576d14feb9a0!2sKota%20Bogor%2C%20Kp.%20Parung%20Jambu%2C%20Kota%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1681597150948!5m2!1sid!2sid"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
 
         <form action="">
           <div class="input-group">
@@ -365,7 +387,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="modal-content">
-          <img src="img/products/1.jpg" alt="Product 1" />
+          <img src="img/products/1.png" alt="Product 1" />
           <div class="product-content">
             <h3>Product 1</h3>
             <p>
