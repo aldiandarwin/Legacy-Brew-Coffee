@@ -77,3 +77,5 @@ defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js">
 This project integrates the Midtrans payment gateway to facilitate secure and reliable online transactions.
 
 Refer to the Midtrans documentation for detailed integration instructions.
+
+![mockup-payment](https://github.com/aldiandarwin/Legacy-Brew-Coffee/assets/70283015/4c13462e-a79d-4f6a-8a9e-2431b4d2bdfa)
