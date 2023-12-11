@@ -89,17 +89,29 @@ form.addEventListener('keyup', function () {
 
 //kirim ketika tombol checkout diklik
 
-checkoutButton.addEventListener('click', function (e) {
+// format pesan whasapp
+checkoutButton.addEventListener('click', async function (e) {
   e.preventDefault()
   const formData = new FormData(form)
   const data = new URLSearchParams(formData)
   const objData = Object.fromEntries(data)
-  const message = formatMessage(objData)
-  window.open(`https://wa.me/6289621078148?text=` + encodeURIComponent(message))
+  // const message = formatMessage(objData)
+  // window.open(`https://wa.me/6289621078148?text=` + encodeURIComponent(message))
+
+  // AJAX token for transaction
+
+  try {
+    const response = await fetch('php/placeOrder.php', {
+      method: 'POST',
+      body: data,
+    })
+    const token = await response.text()
+    // console.log(token)
+    window.snap.pay(token)
+  } catch (err) {
+    console.log(err.message)
+  }
 })
-
-// format pesan whasapp
-
 const formatMessage = (obj) => {
   return `Data Customer
   Name: ${obj.name}
